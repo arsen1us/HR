@@ -1,0 +1,37 @@
+﻿input{
+    border:solid;
+    
+}
+.references{
+    border: solid 2px;
+    border-radius: 7px;
+    border-color: #70b97b;
+    text-decoration: none;
+    color: black;
+    padding: 0px 4px 0px 4px;
+    background: #89d695;
+    font-family: arial, sans-serif;
+    font-size: 15px;
+}
+header {
+    background: #a97dfb;
+    height: 100px;
+    margin: 100px;
+
+}
+footer{
+    height: 100px;
+    background: #a97dfb;
+}
+
+.field-validation-error {
+    border: solid 2px;
+    border-radius: 7px;
+    border-color: #70b97b;
+    text-decoration: none;
+    color: black;
+    padding: 0px 4px 0px 4px;
+    background: #89d695;
+    font-family: arial, sans-serif;
+    font-size: 15px;
+}

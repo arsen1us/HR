@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Resume>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>All Resumes</title>
+    </head>
+    <body>
+        @{
+        var resumes = new List<Resume>
+        {
+            new Resume{ ResumeProfession = "FrontEnd", ResumeSalary = 70000, ResumeKeySkills = "javascript"},
+
+        };}
+        <form method="post">
+            <input type="search" value="Searh resumes" />
+            <input type="submit" value="Searh"/>
+        </form>
+        <p>Resumes</p>
+        <div class="resume_container">
+            @foreach(var resume in resumes)
+            {
+            <div>
+                <p>@resume.ResumeProfession</p>
+                <p>@resume.ResumeSalary</p>
+                <p>Key Skills</p>
+                <p>@resume.ResumeKeySkills</p>
+                <!-- <p>resume.FkClient.ClientName</p>-->
+            </div>
+            }
+        </div>
+        
+    </body>
+</html>

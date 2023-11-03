@@ -1,0 +1,24 @@
+﻿@model Resume;
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        }
+        @{HR_Context context = new HR_Context();}
+        @{var company = context.Companies.FirstOrDefault(company => company.CompanyId == 1);}
+        <p>@company.CompanyName</p>
+        <form method="post" asp-action="AddResume" asp-controller="Resume">
+        <label>Choose company</label>
+        <select>
+            @foreach(var item in context.Companies)
+            {
+                <option value="@item.CompanyName" asp-for="">@{
+                        var current_company = item.CompanyName;
+                    }</option>
+            }
+        </select>
+        </form>
+    </body>
+</html>
